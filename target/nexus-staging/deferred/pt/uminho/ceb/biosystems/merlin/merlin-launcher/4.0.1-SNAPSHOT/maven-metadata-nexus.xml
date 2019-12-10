@@ -7,23 +7,39 @@
     <snapshot>
       <localCopy>true</localCopy>
     </snapshot>
+<<<<<<< HEAD
     <lastUpdated>20191205111543</lastUpdated>
+=======
+    <lastUpdated>20191209150549</lastUpdated>
+>>>>>>> 0bffbd2707acd2fe54555cc1e4e13a81210bc3c0
     <snapshotVersions>
       <snapshotVersion>
         <classifier>sources</classifier>
         <extension>jar</extension>
         <value>4.0.1-SNAPSHOT</value>
+<<<<<<< HEAD
         <updated>20191205111543</updated>
+=======
+        <updated>20191209150549</updated>
+>>>>>>> 0bffbd2707acd2fe54555cc1e4e13a81210bc3c0
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar</extension>
         <value>4.0.1-SNAPSHOT</value>
+<<<<<<< HEAD
         <updated>20191205111543</updated>
+=======
+        <updated>20191209150549</updated>
+>>>>>>> 0bffbd2707acd2fe54555cc1e4e13a81210bc3c0
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
         <value>4.0.1-SNAPSHOT</value>
+<<<<<<< HEAD
         <updated>20191205111543</updated>
+=======
+        <updated>20191209150549</updated>
+>>>>>>> 0bffbd2707acd2fe54555cc1e4e13a81210bc3c0
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

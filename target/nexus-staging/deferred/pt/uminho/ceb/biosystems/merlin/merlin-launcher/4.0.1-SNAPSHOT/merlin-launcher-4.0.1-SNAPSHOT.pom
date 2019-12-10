@@ -14,7 +14,7 @@
 		<pt.uminho.ceb.biosystems.merlin.version>4.0.0-SNAPSHOT</pt.uminho.ceb.biosystems.merlin.version>
 		<pt.uminho.ceb.biosystems.merlin.groupId>pt.uminho.ceb.biosystems.merlin</pt.uminho.ceb.biosystems.merlin.groupId>
 		<merlin.build.directory>${project.build.directory}/merlin/</merlin.build.directory>
-		<merlin.lib.directory>${project.basedir}/../merlin-aibench/lib</merlin.lib.directory>
+		<merlin.lib.directory>${project.basedir}/../merlin-project/merlin-gui/lib</merlin.lib.directory>
 		<slf4j.version>1.8.0-beta4</slf4j.version>
 		<build.name>alpha</build.name>
 		<project.version>v4.0.2</project.version>
