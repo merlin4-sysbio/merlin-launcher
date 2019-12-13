@@ -179,7 +179,7 @@ public class MainCycle {
 		    Integer historyLimit = null;
 		    
 		    try {
-		    	System.out.println(propManager.getPropertiesDictionary().get("logDaysHistoryLimit"));
+//		    	System.out.println(propManager.getPropertiesDictionary().get("logDaysHistoryLimit"));
 				historyLimit = Integer.valueOf(propManager.getPropertiesDictionary().get("logDaysHistoryLimit"));
 				
 				String logsPath = LauncherUtilities.readLogsPathDirectory();
