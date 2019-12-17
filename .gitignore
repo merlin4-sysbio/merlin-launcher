@@ -1,1 +1,20 @@
+<<<<<<< HEAD
+# Maven
+target
+pom.xml.versionsBackup
+
+# Eclipse
+.settings
+.classpath
+.project
+
+# IntelliJ IDEA
+*.iml
+.idea
+
+# Sphinx docs
+build
+
+=======
 /target
+>>>>>>> ccffeae7bf2acf03216ec123095c1fa0777314c4
