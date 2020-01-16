@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
-import es.uvigo.ei.aibench.Launcher;
 import es.uvigo.ei.aibench.repository.PluginInstaller;
 
 
@@ -17,6 +16,7 @@ public class MainCycle {
 	private static int DEFAULT_RESTART_SIGNAL = 10;
 	public static final int LOG_HISTORY_LIMIT  = 7;
 	public static final String LOGS_PATH  = "./logs";
+	private static final boolean _MVN_LIST_DEPENDENCIES = true;
 	private static String OS = System.getProperty("os.name").toLowerCase();
 	private static String DELETEFILES = "deletefiles";
 	private static String DELETEFILESLIST = "deletefileslist";
@@ -31,7 +31,7 @@ public class MainCycle {
 	
 	
 	private static List<String> extraFilesWindows = 
-			java.util.Collections.unmodifiableList(java.util.Arrays.asList("merlin.sh", 
+			java.util.Collections.unmodifiableList(java.util.Arrays.asList("run.sh", 
 					new File(System.getProperty("user.dir")).getParent()+"/MacOS/merlin", 
 					new File(System.getProperty("user.dir")).getParent()+"MacOS"));
 	
@@ -163,7 +163,7 @@ public class MainCycle {
 		    pb.redirectError(new File(logError));
 		    Process proc = pb.start();
 		    
-		    x = proc.waitFor();		    
+		   // x = proc.waitFor();		    
 		    
 			PluginInstaller installer = new PluginInstaller(pluginsBin, pluginsInstall,	".");
 		
@@ -171,7 +171,7 @@ public class MainCycle {
 		    
 		    File dependenciesFile = new File(DEPENDENCIESFILE);
 		    if(dependenciesFile.exists())
-		    	LauncherUtilities.deleteAllFilesExceptInFileList(dependenciesFile, new File("lib"));
+		    	LauncherUtilities.deleteAllFilesExceptInFileList(dependenciesFile, new File("lib"), _MVN_LIST_DEPENDENCIES);
 		    
 		    signal = getRestartSignal();
 		    

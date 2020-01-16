@@ -143,7 +143,7 @@ public class LauncherUtilities {
 		return list;
 	}
 	
-	public static void deleteAllFilesExceptInFileList(File fileWithList, File folder){
+	public static void deleteAllFilesExceptInFileList(File fileWithList, File folder, boolean mvnListDependencies){
 		if(!folder.isDirectory())
 			return;
 		
@@ -151,13 +151,24 @@ public class LauncherUtilities {
 		filesToKeepAux.add("launcher.jar");
 		List<String> filesToKeep = new LinkedList<>();
 		// Append folder to filesToKeep
-		for (String keep : filesToKeepAux)
-			filesToKeep.add(folder + File.separator + keep);
+		for (String keep : filesToKeepAux) {
+			
+			if(mvnListDependencies && keep.trim().split(":").length>2) {
+				
+				String[] keepSplit = keep.trim().split(":");
+				String keepName = keepSplit[1].concat("-").concat(keepSplit[3]).concat(".").concat(keepSplit[2]);
+				filesToKeep.add(folder + File.separator + keepName.trim());
+			}
+			else {
+				
+				filesToKeep.add(folder + File.separator + keep.trim());
+			}
+		}
 			
 		List<String> allFilesInFolder = new ArrayList<String>();
 		File[] fileList = folder.listFiles();
 		for (File file : fileList)
-			allFilesInFolder.add(folder.getName() + File.separator + file.getName());
+				allFilesInFolder.add(folder.getName() + File.separator + file.getName());
 		
 		List<String> filesToDelete = new ArrayList<String>(allFilesInFolder);
 		filesToDelete.removeAll(filesToKeep);
