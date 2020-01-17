@@ -163,7 +163,7 @@ public class MainCycle {
 		    pb.redirectError(new File(logError));
 		    Process proc = pb.start();
 		    
-		   // x = proc.waitFor();		    
+		    x = proc.waitFor();		    
 		    
 			PluginInstaller installer = new PluginInstaller(pluginsBin, pluginsInstall,	".");
 		

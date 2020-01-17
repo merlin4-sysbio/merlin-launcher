@@ -4,23 +4,32 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>pt.uminho.ceb.biosystems.merlin</groupId>
 	<artifactId>merlin-launcher</artifactId>
-	<version>4.0.03-SNAPSHOT</version>
+	<version>4.0.04-SNAPSHOT</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.build.timestamp.format>yyyy</maven.build.timestamp.format>
-		<pt.uminho.ceb.biosystems.merlin.version>4.0.03-SNAPSHOT</pt.uminho.ceb.biosystems.merlin.version>
+		<pt.uminho.ceb.biosystems.merlin.version>4.0.04-SNAPSHOT</pt.uminho.ceb.biosystems.merlin.version>
 		<pt.uminho.ceb.biosystems.merlin.groupId>pt.uminho.ceb.biosystems.merlin</pt.uminho.ceb.biosystems.merlin.groupId>
 		<merlin.build.directory>${project.build.directory}/merlin/</merlin.build.directory>
 		<merlin.lib.directory>${project.basedir}/../merlin-project/merlin-gui/lib</merlin.lib.directory>
 		<slf4j.version>1.8.0-beta4</slf4j.version>
 		<build.name>alpha</build.name>
-		<project.version>v4.0.2</project.version>
+		<project.version>${version}-beta</project.version>
+		<merlin.build.directory>${project.basedir}/../merlin-project/merlin-gui</merlin.build.directory>
 	</properties>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>${basedir}/src/main/resources</directory>
+				<!-- <targetPath>${basedir}/bin/resources</targetPath> -->
+			    <filtering>true</filtering>
+			</resource>
+		</resources>
+		
 		<plugins>
 			<!-- <plugin>
 				<groupId>org.sonatype.plugins</groupId>
